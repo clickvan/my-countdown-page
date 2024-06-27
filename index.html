@@ -7,6 +7,7 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -16,10 +17,15 @@
         }
         #countdown {
             font-size: 3em;
+            margin-top: 20px;
+        }
+        img {
+            max-width: 200px;
         }
     </style>
 </head>
 <body>
+    <img src="Capture d’écran 2024-04-27 à 12.19.58.png" alt="Logo">
     <div id="countdown"></div>
 
     <script>
@@ -38,7 +44,7 @@
             // Calculer les jours, heures, minutes et secondes
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const minutes = Math.floor((distance % (1000 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             // Afficher le résultat dans l'élément avec l'id "countdown"
@@ -52,4 +58,5 @@
             }
         }, 1000);
     </script>
-</
+</body>
+</html>
